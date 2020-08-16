@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.TransactionsDetailActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineStart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineEnd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:autoLink="all"
+        android:textIsSelectable="true"
+        android:textColorLink="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guideLineStart"
+       app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewAddTag"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAlignment="viewEnd"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/label_add_update_tag"
+        android:textColorLink="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guideLineStart"
+        app:layout_constraintBottom_toTopOf="@+id/textViewTag" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewTag"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAlignment="viewEnd"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:layout_marginBottom="40dp"
+        android:textColorLink="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guideLineStart"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

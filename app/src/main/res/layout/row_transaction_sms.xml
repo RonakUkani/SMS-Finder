@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    android:paddingTop="12dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineStart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineEnd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewTitle"
+        tools:text="SMS TITLE"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@id/guideLineEnd"
+        app:layout_constraintStart_toEndOf="@id/guideLineStart"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewMessage"
+        tools:text="SMS TITLE"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="8dp"
+        android:textSize="15sp"
+        android:maxLines="2"
+        app:layout_constraintEnd_toStartOf="@id/guideLineEnd"
+        app:layout_constraintStart_toEndOf="@id/guideLineStart"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle" />
+
+    <View
+        android:id="@+id/viewUnderline"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
+        app:layout_constraintStart_toStartOf="@id/guideLineStart"
+        app:layout_constraintTop_toBottomOf="@id/textViewMessage" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
